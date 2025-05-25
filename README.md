@@ -120,7 +120,7 @@ The application features a clean architecture with **well-defined models**, **CR
 
 ## **Folder Structure**
 
-project_root/
+'''project_root/
 │
 ├── your_app/
 │ ├── models.py # Database models for Category and Product
@@ -132,7 +132,7 @@ project_root/
 ├── media/ # Uploaded images storage
 ├── db.sqlite3 # Database file
 ├── manage.py # Django project management command
-├── requirements.txt # Python dependencies
+├── requirements.txt # Python dependencies'''
 
 ## **Future Scope**
 
