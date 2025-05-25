@@ -70,6 +70,84 @@ The application features a clean architecture with **well-defined models**, **CR
 
 1. **Clone the repo:**
 
-```bash
-git clone https://github.com/yourusername/django-product-catalog.git
-cd django-product-catalog
+    ```bash
+    git clone https://github.com/yourusername/django-product-catalog.git
+    cd django-product-catalog
+    ```
+
+2. **Create virtual environment and activate:**
+
+    ```bash
+    python -m venv env
+    source env/bin/activate  # Windows: env\Scripts\activate
+    ```
+
+3. **Install dependencies:**
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4. **Configure media settings in `settings.py`:**
+
+    ```python
+    MEDIA_URL = '/media/'
+    MEDIA_ROOT = BASE_DIR / 'media'
+    ```
+
+5. **Apply database migrations:**
+
+    ```bash
+    python manage.py makemigrations
+    python manage.py migrate
+    ```
+
+6. **Create a superuser (optional):**
+
+    ```bash
+    python manage.py createsuperuser
+    ```
+
+7. **Run the server:**
+
+    ```bash
+    python manage.py runserver
+    ```
+
+8. Visit `http://127.0.0.1:8000/` to access the application.
+
+---
+
+## **Folder Structure**
+
+project_root/
+│
+├── your_app/
+│ ├── models.py # Database models for Category and Product
+│ ├── views.py # CRUD and business logic
+│ ├── forms.py # Forms for data validation and input
+│ ├── urls.py # URL routes for the app
+│ └── templates/ # HTML templates for UI rendering
+│
+├── media/ # Uploaded images storage
+├── db.sqlite3 # Database file
+├── manage.py # Django project management command
+├── requirements.txt # Python dependencies
+
+## **Future Scope**
+
+- **Add product image galleries** to enrich product pages.
+- Implement **pagination** and **sorting** for better UX with large catalogs.
+- Integrate **AJAX** or frontend frameworks like React for dynamic filtering.
+- Develop **REST APIs** using Django REST Framework for mobile and third-party access.
+- Add **user authentication and authorization** to protect admin features.
+- Enhance product data with **reviews, ratings, and inventory tracking**.
+
+---
+
+## **Author**
+
+**Mayur Subhash Gholap**  
+Mechanical Engineer | Full Stack Developer | Django & ML Enthusiast
+
+---
