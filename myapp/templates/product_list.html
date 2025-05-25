@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product List</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+<h2 class="page-title">Product List</h2>
+
+<div class="button-container">
+    <a href="{% url 'product_create' %}" class="btn-link">Add New Product</a>
+    <a href="{% url 'category_create' %}" class="btn-link">Add New Category</a>
+</div>
+
+<form method="get" class="filter-form">
+    <select name="category">
+        <option value="">All Categories</option>
+        {% for category in categories %}
+            <option value="{{ category.id }}" {% if request.GET.category == category.id|stringformat:"s" %}selected{% endif %}>
+                {{ category.name }}
+            </option>
+        {% endfor %}
+    </select>
+
+    <input type="text" name="search" placeholder="Search by name" value="{{ request.GET.search }}">
+
+    <select name="is_active">
+        <option value="">All</option>
+        <option value="true" {% if request.GET.is_active == 'true' %}selected{% endif %}>Active</option>
+        <option value="false" {% if request.GET.is_active == 'false' %}selected{% endif %}>Inactive</option>
+    </select>
+
+    <button type="submit">Filter</button>
+</form>
+
+<table class="custom-table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Tag</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for product in products %}
+            <tr>
+                <td>{{ product.name }}</td>
+                <td>₹{{ product.price }}</td>
+                <td>{{ product.get_tag_display }}</td>
+                <td>{% if product.is_active %}
+                    <span class="product-status active">Active</span>
+                    {% else %}<span class="product-status inactive">Inactive</span>{% endif %}</td>
+                <td>
+                    <a href="{% url 'product_update' product.pk %}" class="edit-link">Edit</a>
+                    <a href="{% url 'product_delete' product.pk %}" class="delete-link">Delete</a>
+                </td>
+            </tr>
+        {% empty %}
+            <tr><td colspan="5">No products found.</td></tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<a href="{% url 'category_list' %}" class="btn-link">Back To Categories</a>
+
+</body>
+</html>
