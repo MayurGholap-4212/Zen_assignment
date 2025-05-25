@@ -2,7 +2,9 @@
 
 ## **Project Overview**
 
-This project is a comprehensive **Django-based web application** that provides a robust system for managing **product categories** and their associated **products**. It is designed to help businesses, especially in retail or e-commerce, organize and showcase their inventory effectively.
+This Django web application is designed to manage a product catalog efficiently by organizing products into various categories. It provides a complete CRUD (Create, Read, Update, Delete) interface for both Categories and Products, allowing users to add new categories, upload images to visually represent them, and maintain a comprehensive product list.
+
+The application supports advanced features such as searching products by name, filtering based on product status (active/inactive), and categorizing products as vegetarian or non-vegetarian using tags. This makes the platform scalable and user-friendly, ideal for small to medium e-commerce stores or inventory management systems.
 
 The application features a clean architecture with **well-defined models**, **CRUD functionality**, **searching**, and **filtering** capabilities. It also incorporates image uploads for categories, improving the visual appeal and user experience.
 
