@@ -152,6 +152,6 @@ project_root/
 ## **Author**
 
 **Mayur Subhash Gholap**  
-Mechanical Engineer | Full Stack Developer | Django & ML Enthusiast
+Engineer | Full Stack Developer | Django & ML Enthusiast
 
 ---
