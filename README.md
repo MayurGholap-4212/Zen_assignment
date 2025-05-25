@@ -28,7 +28,7 @@ The application features a clean architecture with **well-defined models**, **CR
   - **Class-based views or function-based views** for handling the HTTP methods.
   - **Templates** to render data and forms on the frontend.
 
-- This layered approach follows the **MVC (Model-View-Controller)** architectural pattern, improving maintainability and scalability.
+
 
 ### **3. Image Handling in Django**
 
@@ -64,7 +64,7 @@ The application features a clean architecture with **well-defined models**, **CR
 - **Database:** SQLite for development; easily replaceable with PostgreSQL, MySQL, etc.
 - **Frontend:** Django Templates with HTML and CSS.
 - **Media Handling:** Django’s built-in media serving combined with Pillow library for image processing.
-- **Version Control:** Git (recommend setting up `.gitignore` to exclude `media/` and `db.sqlite3`).
+
 
 ---
 
