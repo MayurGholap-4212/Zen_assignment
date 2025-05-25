@@ -120,7 +120,7 @@ The application features a clean architecture with **well-defined models**, **CR
 
 ## **Folder Structure**
 
-'''bash
+```bash
 project_root/
 │
 ├── your_app/
@@ -134,7 +134,7 @@ project_root/
 ├── db.sqlite3 # Database file
 ├── manage.py # Django project management command
 ├── requirements.txt # Python dependencies
-'''
+```
 
 ## **Future Scope**
 
